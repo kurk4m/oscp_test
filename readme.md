@@ -5,6 +5,16 @@ how to jenkins bruteforce?
 
 SSTI,XSS,blob:https://app.hackthebox.com/32caa1fd-54a8-499f-acea-b27d3e03c561
 
+Foothold:
+PHP
+~~reverse shells
+https://github.com/BlackArch/webshells
+/usr/share/webshells/
+upload file & look for uploads directory
+python3 -c 'import pty;pty.spawn("/bin/bash")'
+
+
+
 SMBCLIENT
 
 smbclient -N -L \\\\{TARGET_IP}\\
@@ -32,8 +42,10 @@ echo "10.129.227.248 thetoppers.htb" | sudo tee -a /etc/hosts
 
 Enumeration:
 sudo nmap -sV 10.129.227.248
-gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.129.169.182 -x php
-gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://ignition.htb
+nmap -sV -sC -p- 10.129.158.230 -oN scan.txt
+
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.129.158.230 -x php
+gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u 10.129.158.230
 
 
 #Impacket
