@@ -31,7 +31,13 @@ ss -tlpn
 Util:
 echo "10.129.227.248 thetoppers.htb" | sudo tee -a /etc/hosts
 
+JOHN:
+zip2john backup.zip > hashes
+john -wordlist=/usr/share/wordlists/rockyou.txt hashes
+gzip -d /usr/share/wordlists/rockyou.txt.gz 
+john --show hashes
 
+hashid 2cb42f8734ea607eefed3b70af13bbd3
 
 
 Enumeration:
@@ -72,6 +78,7 @@ https://github.com/int0x33/nc.exe/blob/master/nc64.exe
 
 Services:
 FTP:
+ftp anonymous@10.129.241.156
 anonymous:anonymous
 
 Postgresql:
