@@ -13,6 +13,8 @@ lookup for a files and try to login as user
 cat /etc/passwd <- check users on server
 su USER <- relogin
 
+script /dev/null -c bash //spawn shell
+
 ec9b13ca4d6229cd5cc1e09980965bf7
 dd6e058e814260bc70e9bbdef2715849
 Foothold:
