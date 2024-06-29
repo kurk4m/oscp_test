@@ -1,5 +1,14 @@
 https://gtfobins.github.io/
 
+```
+└──╼ $feroxbuster -u http://10.129.93.13 -x php,html
+
+nmap -v -sV -p- -oA devops_full 10.10.10.91
+searchsploit --nmap -v devops_full.xml
+msf auxiliary(scanner/ssh/ssh_enumusers) > run
+```
+
+
 # Linux
 
 ## Recon enumeration
@@ -8,6 +17,7 @@ https://gtfobins.github.io/
 sudo nmap -sV 10.129.227.248
 nmap -sV -sC -p- 10.129.158.230 -oN scan.txt
 
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u 10.129.93.13
 gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.129.158.230 -x php
 gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u 10.129.158.230
 ```
