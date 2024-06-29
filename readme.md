@@ -5,6 +5,13 @@ how to jenkins bruteforce?
 
 SSTI,XSS,blob:https://app.hackthebox.com/32caa1fd-54a8-499f-acea-b27d3e03c561
 
+lxc
+sudo apt install snapd
+sudo snap install distrobuilder --classic
+
+build-lxd
+
+
 recon enumeration
 system enumeration
 
