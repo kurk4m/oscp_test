@@ -5,8 +5,11 @@ how to jenkins bruteforce?
 
 SSTI,XSS,blob:https://app.hackthebox.com/32caa1fd-54a8-499f-acea-b27d3e03c561
 
+recon enumeration
+system enumeration
 
-
+mike:Sheffield19
+a56ef91d70cfbf2cdb8f454c006935a1
 
 
 SMBCLIENT
