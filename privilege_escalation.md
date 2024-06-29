@@ -1,3 +1,5 @@
+https://book.hacktricks.xyz/linux-hardening/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation
+
 Privilege escalation:
 Linux
 sudo -l <- try to obtain root
