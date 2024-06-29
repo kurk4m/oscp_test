@@ -24,6 +24,9 @@ ss -tlpn
 
 Util:
 echo "10.129.227.248 thetoppers.htb" | sudo tee -a /etc/hosts
+
+python3 -m http.server 8000
+
 ```
 
 
