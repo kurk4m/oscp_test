@@ -17,7 +17,7 @@ system enumeration
 
 mike:Sheffield19
 a56ef91d70cfbf2cdb8f454c006935a1
-
+c693d9c7499d9f572ee375d4c14c7bcf
 
 SMBCLIENT
 
