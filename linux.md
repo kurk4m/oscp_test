@@ -2,6 +2,8 @@ https://gtfobins.github.io/
 
 ```
 └──╼ $feroxbuster -u http://10.129.93.13 -x php,html
+gobuster dir -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt -u 10.129.93.13
+gobuster dir -w /usr/share/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt -u 10.129.93.13 -x php
 
 nmap -v -sV -p- -oA devops_full 10.10.10.91
 searchsploit --nmap -v devops_full.xml
