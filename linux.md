@@ -27,6 +27,8 @@ gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 
 gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u 10.129.158.230
 ```
 
+/cgi-bin => shellshock
+
 ## Foothold
 
 ## Privilege escalation
