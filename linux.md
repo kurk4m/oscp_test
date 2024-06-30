@@ -19,6 +19,9 @@ msf auxiliary(scanner/ssh/ssh_enumusers) > run
 sudo nmap -sV 10.129.227.248
 nmap -sV -sC -p- 10.129.158.230 -oN scan.txt
 
+dirb http://10.129.92.107 -w /usr/share/wordlists/dirb/common.txt
+dirb http://10.129.92.107/cgi-bin/ -w /usr/share/wordlists/dirb/common.txt -X .sh,.pl,.php
+
 gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u 10.129.93.13
 gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u 10.129.158.230 -x php
 gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u 10.129.158.230
