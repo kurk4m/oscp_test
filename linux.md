@@ -9,6 +9,11 @@ smbclient -N -L \\\\{TARGET_IP}\\
 smbclient -L 10.129.209.18 -U Administrator
 smbclient \\\\10.129.209.18\C$ -U Administrator
 smbmap -H 10.129.201.119
+
+mask""
+recurse ON
+prompt OFF
+mget *
 ```
 
 ## Foothold
